@@ -1,0 +1,26 @@
+<!-- Explain the role of deferred scripts in JavaScripts.
+
+
+The HTML code’s parsing while the page is loading is stopped by default until the script has not paused executing. If your server is a little slow or the script is specifically heavy, then your webpage will be delayed. While you are using Deferred, scripts delays the execution for sometime of the script till the time the HTML parser is running. This lessens the loading time of web pages and get showed up faster. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The script defer attribute</h1>
+
+    <script src="demo_defer.js" defer></script>
+
+    <p>
+      The script above requests information from the paragraph below. Normally,
+      this is not possible, because the script is executed before the paragraph
+      exists.
+    </p>
+
+    <p id="p1">Hello World!</p>
+
+    <p>
+      However, the defer attribute specifies that the script should be executed
+      later. This way the script can request information from the paragraph.
+    </p>
+  </body>
+</html>
